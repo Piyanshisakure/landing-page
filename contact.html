@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<title>Bakery</title>
+<script type="text/javascript">
+function chkdata(){
+var n1,a1,pl,e1,m1;
+nl=form1.name1.value;
+al=form1.address1.value;
+pl=form1.phone1.value;
+el=form1.email1.value;
+ml=form1.message1.value;
+
+if(n1=="" || a1=="" || p1=="" || e1=="" || m1==""){
+alert("All fields are mandatory.");
+return;
+}
+if(isNaN(p1)==true){
+alert("Phone number should contain digits only.");
+return;
+}
+if(p1.length>10){
+alert("Telephone number should be maximum 10 digits.");
+return;
+}
+var reg=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+if(reg.test(e1)==false){
+alert('Invalid Email Address->',+e1);
+return;
+}
+document.getElementById("demo").style.color="gray";
+document.getElementById("demo").innerHTML="Valid data->"+e1;
+return;
+}
+</script>
+</head>
+<style>
+h1{text-align:center;font-size:40px;font-family:Hero;}
+h2{text-align:center;font-size:30px;}
+p{text-align:center;font-size:25px;font-family:hero;}
+.footer{
+position:fixed;
+left:0;
+top:0;
+height:6%;
+width:100%;
+background-color:#5C3420;
+color:#EFE7DD;
+text-align:center;
+}
+</style>
+<body bgcolor="#EFE7DD" text="#5C3420">
+<div class="footer">
+<marquee direction=right  behavior=scroll scrollamount="500" scrolldelay=3000> 
+<h3>Flat 15% OFF on the first order : Use Code SIGNUP06</h3>
+</marquee>
+</div>
+<br><br>
+<nav>
+<ul>
+<a href="file:///C:/GOODLUCK/website.html"> Go To Home</a></ul></nav>
+<h1>Contact Us</h1>
+<p>***********************************************************************************************************************</p>
+<p>We would love to hear from you.<br>Share your thoughts and queries with us!</p>
+
+<center>
+<form name="form1">
+<table border=0 >
+<tr>
+<td><b>Name:</b>
+<td><input type="text" name="name1" id="n11" size=30 required >
+<tr>
+<td><b>Address:</b>
+<td><textarea name="address1" id="a11" size=40 required placeholder="Enter your address here"></textarea>
+<tr>
+<td><b>Phone no.:</b>
+<td><input type="text" name="phone1" id="p11" size=30  required ><br>
+<tr>
+<td><b>Email ID:</b>
+<td><input type="text" name="email1" id="e11"  placeholder="Enter your Email" size=30 required pattern="^[a-zA-Z0-9]+(\.{a-zA-Z0-9}+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"/>
+<tr>
+<td><b>Message:</b>
+<td><textarea name="message1" cols=20 rows=5 placeholder="enter your message" size=30 required ></textarea>
+</table>
+<br>
+<p id="demo" style="color:red;"></p>
+<button type=button  name="button1" id="b11" style="background-color:#5C3420 ;color:#EFE7DD" onclick="chkdata()">Submit</button>
+<input type="reset" name="reset1" id="r11" style="background-color:#5C3420 ;color:#EFE7DD" value="Reset">
+</center>
+
+<h2>The Old School Bakery</h2>
+<p><b>Registered Address:</b></p>
+
+<p>Chhatrapati Square,opposite to sai Mandir,Wardha Road,<br>Nagpur,Maharashtra,India</p>
+<br>
+<h2>Contact Details:</h2>
+<p> +911234567890</p>
+<p>contact@Theoldschool.in</p>
+
+</form>
+</body>
+</html>
